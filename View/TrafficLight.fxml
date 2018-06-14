@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+
+<SplitPane dividerPositions="0.5" maxHeight="800" maxWidth="1000" minHeight="400" minWidth="600" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TrafficController">
+  <items>
+    <AnchorPane minHeight="160.0" minWidth="100.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <RadioButton fx:id="trafficLight1" layoutX="44.0" layoutY="363.0" mnemonicParsing="false" selected="true" text="Traffic Light 1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="trafficLight" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="trafficLight2" layoutX="178.0" layoutY="363.0" mnemonicParsing="false" text="Traffic Light 2" toggleGroup="$trafficLight" />
+            <Pane layoutX="6.0" layoutY="14.0" prefHeight="153.0" prefWidth="285.0">
+               <children>
+                  <Circle fx:id="red1" fill="#ee0000" layoutX="143.0" layoutY="40" opacity="0.5" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="green1" fill="#21d011" layoutX="143.0" layoutY="120" opacity="0.5" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="yellow1" fill="#ffe71f" layoutX="143.0" layoutY="80" opacity="0.5" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Separator layoutX="18.0" layoutY="152.0" prefHeight="1.0" prefWidth="250" />
+               </children>
+            </Pane>
+            <Pane layoutX="6.0" layoutY="167.0" prefHeight="153.0" prefWidth="285.0">
+               <children>
+                  <Circle fx:id="red2" fill="#ee0000" layoutX="143.0" layoutY="40" opacity="0.5" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="green2" fill="#21d011" layoutX="143.0" layoutY="120" opacity="0.5" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="yellow2" fill="#ffe71f" layoutX="143.0" layoutY="80" opacity="0.5" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </Pane>
+         </children></AnchorPane>
+    <AnchorPane minHeight="160.0" minWidth="100.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Pane layoutX="6.0" layoutY="14.0" prefHeight="153.0" prefWidth="285.0">
+               <children>
+                  <Separator layoutX="18.0" layoutY="152.0" prefHeight="1.0" prefWidth="250" />
+                  <TextField fx:id="textTrafficLight1" layoutX="68.0" layoutY="64.0" prefHeight="25.0" prefWidth="150.0" />
+               </children></Pane>
+            <Pane layoutX="6.0" layoutY="167.0" prefHeight="153.0" prefWidth="285.0">
+               <children>
+                  <TextField fx:id="textTrafficLight2" layoutX="68.0" layoutY="64.0" prefHeight="25.0" prefWidth="150.0" />
+               </children></Pane>
+            <Button fx:id="changeRed" layoutX="47.0" layoutY="325.0" mnemonicParsing="false" onAction="#changeRed" prefWidth="55" text="Red" />
+            <Button fx:id="changeYellow" layoutX="119.0" layoutY="325.0" mnemonicParsing="false" onAction="#changeYellow" prefWidth="55" text="Yellow" />
+            <Button fx:id="changeGreen" layoutX="188.0" layoutY="325.0" mnemonicParsing="false" onAction="#changeGreen" prefWidth="55" text="Green" />
+            <Button layoutX="119.0" layoutY="359.0" mnemonicParsing="false" onAction="#reset" prefWidth="55" text="Reset" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
